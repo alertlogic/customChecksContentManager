@@ -9,7 +9,7 @@ yellow='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Find out where we launched from.
-echo -e "${white}Installing al_lambda_template Workspace.${NC}"
+echo -e "${white}Installing customChecksContentManager Workspace.${NC}"
 START_DIR=`pwd`
 
 # Iterate up the directory structure until we find the root of the al_ui_template repo that we are being executed within
@@ -24,15 +24,15 @@ done
 
 if [ $PWD = '/' ]
 then
-    echo "The root of the current al_lambda_template repository could not be found: \033[1;31mABORTING\033[0m (make sure you run npm hookmeup)"
+    echo "The root of the current customChecksContentManager repository could not be found: \033[1;31mABORTING\033[0m (make sure you run npm hookmeup)"
     echo "Evaluated from this path: $WHERE_AM_I"
     exit 1
 fi
 
 if [ ! -f package.json ]
 then
-    echo "The root of your al_lambda_template repository does not actually appear to be an al_lambda_template repository: \033[1;31mABORTING\033[0m"
-    echo "Using al_lambda_template root $PWD derived from origin path $WHERE_AM_I"
+    echo "The root of your customChecksContentManager repository does not actually appear to be an customChecksContentManager repository: \033[1;31mABORTING\033[0m"
+    echo "Using customChecksContentManager root $PWD derived from origin path $WHERE_AM_I"
     exit 1
 fi
 
@@ -63,7 +63,7 @@ rm -Rf ~/.npm
 rm -Rf node_modules
 
 # Install base UI evelopment environment requires.
-echo -e "${white}Installing al_lambda_template Dependencies.${NC}"
+echo -e "${white}Installing customChecksContentManager Dependencies.${NC}"
 cd $ALUITEMPLATE_DIR
 npm install -g grunt-cli
 npm install -g n
@@ -90,5 +90,5 @@ node_modules/protractor/bin/webdriver-manager update --standalone
 
 # Return to where the user executed this script from.
 cd $START_DIR
-echo -e "${green}al_lambda_template Workspace Installation Complete!${NC}"
+echo -e "${green}customChecksContentManager Workspace Installation Complete!${NC}"
 exit 0

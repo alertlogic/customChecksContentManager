@@ -12,21 +12,21 @@ done
 
 if [ $PWD = '/' ]
 then
-    echo "The root of the current al_lambda_template repository could not be found: \033[1;31mABORTING\033[0m (make sure you run npm hookmeup)"
+    echo "The root of the current customChecksContentManager repository could not be found: \033[1;31mABORTING\033[0m (make sure you run npm hookmeup)"
     echo "Evaluated from this path: $WHERE_AM_I"
     exit 1
 fi
 
 if [ ! -f package.json ]
 then
-    echo "The root of your al_lambda_template repository does not actually appear to be an al_ui_template repository: \033[1;31mABORTING\033[0m"
-    echo "Using al_lambda_template root $PWD derived from origin path $WHERE_AM_I"
+    echo "The root of your customChecksContentManager repository does not actually appear to be an customChecksContentManager repository: \033[1;31mABORTING\033[0m"
+    echo "Using customChecksContentManager root $PWD derived from origin path $WHERE_AM_I"
     exit 1
 fi
 
 echo "=================================================================="
-echo "Installing git hooks to al_lambda_template repository at \033[1;36m$PWD\033[0m..."
+echo "Installing git hooks to customChecksContentManager repository at \033[1;36m$PWD\033[0m..."
 echo "=================================================================="
 
 cp git-hooks/pre-push .git/hooks/
-echo "al_lambda_template.................. installed"
+echo "customChecksContentManager.................. installed"
